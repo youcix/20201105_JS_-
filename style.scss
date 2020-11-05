@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:微軟正黑體;
+}
+// 大盒子
+#yo-slider {
+    height: 100vh;
+    overflow: hidden;
+
+    // 輪播項目
+    .yo-item{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: none;
+
+        // 圖片
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  
+            animation-name: YoImage;
+            animation-duration: 1s;
+        }
+
+        // 標題
+        h1{
+            position: absolute;
+            color: aliceblue;
+            padding: 100px;
+            letter-spacing:5px;
+            animation-name: YoTitle;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+            z-index: 2;
+        }
+    }
+    // 要顯示的項目
+    .yo-active{
+        display: block;
+    }
+
+    // (大)按扭區塊
+    #yo-prev, #yo-next{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        border-radius: 50px;
+    }
+    #yo-prev{
+        left:0;
+    }
+    #yo-next{
+        right:0;
+    }
+}
+
+// 動畫 animation 必須先額外設定動畫的效果
+// @關鍵影格 動畫名稱
+// 0% {} 開始時效果
+// 0% - 100% {}
+@keyframes YoImage {
+    0%{
+        transform: scale(1.3);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes YoTitle {
+    0%{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+       opacity: 0.8;
+    }
+}

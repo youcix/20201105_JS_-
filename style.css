@@ -1,0 +1,119 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 微軟正黑體;
+}
+
+#yo-slider {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#yo-slider .yo-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#yo-slider .yo-item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-name: YoImage;
+          animation-name: YoImage;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#yo-slider .yo-item h1 {
+  position: absolute;
+  color: aliceblue;
+  padding: 100px;
+  letter-spacing: 5px;
+  -webkit-animation-name: YoTitle;
+          animation-name: YoTitle;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  z-index: 2;
+}
+
+#yo-slider .yo-active {
+  display: block;
+}
+
+#yo-slider #yo-prev, #yo-slider #yo-next {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 3;
+  border-radius: 50px;
+}
+
+#yo-slider #yo-prev {
+  left: 0;
+}
+
+#yo-slider #yo-next {
+  right: 0;
+}
+
+@-webkit-keyframes YoImage {
+  0% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes YoImage {
+  0% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes YoTitle {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.8;
+  }
+}
+
+@keyframes YoTitle {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.8;
+  }
+}
+/*# sourceMappingURL=style.css.map */
