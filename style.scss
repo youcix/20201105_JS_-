@@ -53,12 +53,35 @@
         transform: translateY(-50%);
         z-index: 3;
         border-radius: 50px;
+        cursor: pointer;
     }
     #yo-prev{
         left:0;
     }
     #yo-next{
         right:0;
+    }
+
+    #yo-buttons{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform:translateX(-50px);
+
+        .yo-button{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #ffffff77;
+            cursor: pointer;
+            border-radius: 50%;
+            margin:0 10px;
+        }
+        .yo-button-active {
+            animation-name: YoButton;
+            animation-duration: 0.5s;
+            animation-fill-mode:forwards ; // 停留在動畫結束的畫面 (backwords 相反)
+        }
     }
 }
 
@@ -87,3 +110,14 @@
        opacity: 0.8;
     }
 }
+
+@keyframes YoButton {
+    0%{
+        background: #ffffff77;
+    }
+
+    100%{
+        background: #00000077;
+    }
+}
+

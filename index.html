@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-        <div id="yo-slider">
+        <!-- 輪播圖大盒子：data-slider-duration 自動輪播速度 -->
+        <div id="yo-slider" data-slider-duration="5000">
+            <!-- 輪播圖項目 -->
             <div class="yo-item yo-active">
                 <img src="./img/bn1.jpg" alt="bn1">
                 <h1>testA</h1>
@@ -25,8 +27,12 @@
             <div id="yo-prev"></div>
             <div id="yo-next"></div>
 
-
-
+            <!-- (小)按鈕區塊 -->
+            <div id="yo-buttons">
+                <div class="yo-button yo-button-active" data-slider-item="1"></div>
+                <div class="yo-button" data-slider-item="2"></div>
+                <div class="yo-button" data-slider-item="3"></div>
+            </div>
 
         </div>
 

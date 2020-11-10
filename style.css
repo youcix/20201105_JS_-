@@ -59,6 +59,7 @@
           transform: translateY(-50%);
   z-index: 3;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 #yo-slider #yo-prev {
@@ -67,6 +68,33 @@
 
 #yo-slider #yo-next {
   right: 0;
+}
+
+#yo-slider #yo-buttons {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+
+#yo-slider #yo-buttons .yo-button {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #ffffff77;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+#yo-slider #yo-buttons .yo-button-active {
+  -webkit-animation-name: YoButton;
+          animation-name: YoButton;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes YoImage {
@@ -114,6 +142,24 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes YoButton {
+  0% {
+    background: #ffffff77;
+  }
+  100% {
+    background: #00000077;
+  }
+}
+
+@keyframes YoButton {
+  0% {
+    background: #ffffff77;
+  }
+  100% {
+    background: #00000077;
   }
 }
 /*# sourceMappingURL=style.css.map */
